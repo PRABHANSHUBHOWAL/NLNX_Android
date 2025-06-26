@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NLNX</string>
+    <string name="hint_prompt">Enter your NL description</string>
+    <string name="btn_search">Search</string>
+    <string name="response_hint">Response will appear here</string>
+    <string name="history_title">Recent Searches</string>
+    <string name="gemini">Gemini</string>
+    <string name="cohere">Cohere Command R</string>
+    <string name="empty_history">No search history yet</string>
+    <string-array name="models_array">
+        <item>Gemini</item>
+        <item>Cohere Command R</item>
+    </string-array>
+</resources>
