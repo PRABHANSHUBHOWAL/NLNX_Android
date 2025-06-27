@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private List<HistoryItem> historyItems = new ArrayList<>();
     private static final int MAX_HISTORY = 10;
 
-    private static final String COHERE_API_KEY = "plsSkwhQ9GCkWsH4KEgtTE26Nk06EVZMyDOS5SRc";
-    private static final String GEMINI_API_KEY = "AIzaSyAkk2Z-tR_FVTo17K7mNsoilbODrmeMTCM";
+    private static final String COHERE_API_KEY = BuildConfig.COHERE_API_KEY;;
+    private static final String GEMINI_API_KEY = BuildConfig.GEMINI_API_KEY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

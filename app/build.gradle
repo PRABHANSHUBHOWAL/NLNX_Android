@@ -2,6 +2,14 @@ plugins {
     id 'com.android.application'
 }
 
+def props = new Properties()
+def localPropsFile = rootProject.file("local.properties")
+if (localPropsFile.exists()) {
+    props.load(new FileInputStream(localPropsFile))
+}
+def geminiKey = props.getProperty("GEMINI_API_KEY", "")
+def cohereKey = props.getProperty("COHERE_API_KEY", "")
+
 android {
     namespace 'com.example.nlnx'
     compileSdk 34
@@ -16,6 +24,11 @@ android {
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+
+        buildConfigField "String", "GEMINI_API_KEY", "\"${geminiKey}\""
+        buildConfigField "String", "COHERE_API_KEY", "\"${cohereKey}\""
+        println "Gemini Key: ${geminiKey}"
+        println "Cohere Key: ${cohereKey}"
     }
 
     buildTypes {
